@@ -14,6 +14,9 @@ body {
     align-items: center;
     justify-content: space-between;
     display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .navbar a {
@@ -22,6 +25,9 @@ body {
     color: #d5d5d6;
     transition: 0.3 ease;
     transition-duration: 0.3s;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 }
 
 .navbar a:hover {
@@ -50,16 +56,378 @@ body {
     padding-right: 20px;
 }
 
+.hero_image{
+    border-radius: 10px;
+    height: 10%;
+    width: 40%;
+    transition: ease 0.3s;
+    transition-duration: 0.3s;
+}
+
 .hero_header h1{
     color: #d5d5d6;
-    font-size: 18px;
+    font-size: 45px;
     font-family: sans-serif;
 }
 .hero {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     background-image: linear-gradient(to bottom,#1e1f21, #1f2022);
     margin-top: 20px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    border-radius: 20px;
+    width: 70%;
+    box-sizing: border-box;
+    min-height: 300px;
+    max-width: fit-content;
+}
+
+.hero p{
+    font-family: sans-serif;
+    color: #d5d5d6;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    width: 70%;
+    min-width: 30;
+    height: auto;
+}
+
+.hero img:hover {
+    width: 50%;
+    height: 20%
+}
+
+.skill_card_gallery {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    flex-wrap: wrap;
+}
+
+.skill_card {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom,#1e1f21, #1f2022);
+    width: 25%;
+    height: auto;
+    border-radius: 20px;
+    transition: ease 0.3s;
+    transition-duration: 0.3s;
+}
+
+.skill_card:hover {
+    width:30%; 
+
+}
+
+.skill_card img {
+    width: 25%;
+    padding: 10px;
+    height: 25%;
+}
+
+.skill_card p {
+    font-family: sans-serif;
+    color: #d5d5d6;
+    font-size: 18px;
+}
+
+.skill_card a {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.hobby_gallery {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.hobby_card {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom,#1e1f21, #1f2022);
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    transition: ease 0.3s;
+    transition-duration: 0.3s;
+}
+
+/* .hobby_card:hover{
+    width: 65%;
+} */
+
+.hobby_card img {
+    width: 80%;
+    padding: 15px;
+    height: auto;
+}
+
+.hobby_card h1 {
+    font-family: sans-serif;
+    color: #d5d5d6;
+    text-align: left; 
+    width: 100%; 
+    margin-left: 30px;
+    margin-bottom: 10px; 
+}
+
+.hobby_card h2 {
+    font-family: sans-serif;
+    display: flex;
+    color: #d5d5d6;
+    text-align: left;
+    font-size: 18px;
+    width: 100%;
+    margin-left: 15px;
+    margin-bottom: 3px; 
+}
+
+.hobby_card p {
+    font-family: sans-serif;
+    color:#d5d5d6;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 20px;
+    width: 80%;
+    text-align: left;
+    line-height: 30px;
+    padding-bottom: 10px;
+}
+
+.project_gallery {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    flex-wrap: wrap;
+    text-decoration: none;
+}
+
+.project_card {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom,#1e1f21, #1f2022);
+    width: 30%;
+    height: auto;
+    border-radius: 20px;
+    transition: ease 0.3s;
+    transition-duration: 0.3s;
+    min-height: 600px;
+    position: relative;
+}
+
+.project_card:hover{
+    background-image:linear-gradient(to bottom, #00439C, #0070cc );
+    width: 32%;
+    height: 50%;
+}
+
+.project_card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project_card img {
+    max-width: 40%;
+    padding: 15px;
+    height: auto;
+    min-height: 300px;
+    margin-top: 50px;
+}
+
+.project_card h1 {
+    font-family: sans-serif;
+    color: #d5d5d6;
+    text-align: left; 
+    width: 90%; 
+    margin-left: 30px;
+    margin-bottom: 10px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    top: 0;
+    position: absolute;
+    font-size: 1.5rem;
+
+     
+}
+
+.project_card h2 {
+    font-family: sans-serif;
+    display: flex;
+    color: #d5d5d6;
+    text-align: left;
+    font-size: 18px;
+    width: 100%;
+    margin-left: 15px;
+    margin-bottom: 3px; 
+}
+
+.project_card p {
+    font-family: sans-serif;
+    color:#d5d5d6;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    font-size: 12px;
+    width: 80%;
+    text-align: left;
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+
+.button_container {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.button_container a {
+    color:#d5d5d6;
+    background-image:linear-gradient(to bottom,#1e1f21, #1f2022);
+    border-radius: 20px;
+    border-color: #d5d5d6;
+    border-style: line;
+    font-family: sans-serif;
+    transition: ease 0.3s;
+    transition-duration: 0.3s;
+    font-size: 20px;
+    padding: 20px;
+    text-decoration: none;
+    margin-top: 40px;
+}
+
+.button_container a:hover {
+    background-image:linear-gradient(to bottom, #00439C, #0070cc );
+    font-family: sans-serif;
+}
+
+/* Make the <a> tag inside .project_card inherit styles */
+.project_card a {
+    text-decoration: none;
+    color: inherit; 
+    background-color: inherit; 
+    font-family: inherit; 
+    display: flex; 
+    flex-direction: inherit;
+    align-items: inherit;
+    justify-content: inherit;
+    width: 100%; 
+    border-radius: inherit; 
+    transition: inherit; 
+}
+
+
+
+/* MEDIA QUERIES FOR DIFFERENT SCREEN SIZES */
+@media (max-width: 1024px) {
+    .skill_card,
+    .hobby_card {
+        width: 40%; 
+    }
+
+    .hero_image {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .profile_img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .skill_card,
+    .hobby_card {
+        width: 45%; 
+    }
+
+    .hero_image {
+        width: 70%;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .navbar a {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .profile_img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .hero_header h1 {
+        font-size: 35px;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .skill_card,
+    .hobby_card {
+        width: 90%; /* Full width on small mobile screens */
+    }
+
+    .hobby_card h1 {
+        font-size: 24px;
+        margin-left: 10px;
+    }
+
+    .hero_image {
+        width: 100%;
+    }
 }
